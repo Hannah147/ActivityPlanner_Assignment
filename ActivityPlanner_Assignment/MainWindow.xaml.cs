@@ -22,6 +22,7 @@ namespace ActivityPlanner_Assignment
     {
         List<Activity> allActivities = new List<Activity>();
         List<Activity> selectedActivities = new List<Activity>();
+        List<Activity> filteredActivities = new List<Activity>();
         public static decimal totalCost;
         public MainWindow()
         {
@@ -187,6 +188,59 @@ namespace ActivityPlanner_Assignment
                 // Sort the dates
                 allActivities.Sort();
                 selectedActivities.Sort();
+            }
+        }
+
+        private void RbAll_Click(object sender, RoutedEventArgs e)
+        {
+            filteredActivities.Clear();
+
+            if(rbAll.IsChecked == false && rbLand.IsChecked == false && rbWater.IsChecked == false && rbAir.IsChecked == false)
+            {
+                allActivities.Clear();
+                selectedActivities.Clear();
+                filteredActivities.Clear();
+                lbxActivities.ItemsSource = filteredActivities;
+            }
+            else if(rbAll.IsChecked == true)
+            {
+                RefreshScreen();
+            }
+            else if(rbLand.IsChecked == true)
+            {
+                foreach(Activity activity in allActivities)
+                {
+                    if(activity.TypeOfActivity == ActivityType.Land)
+                    {
+                        filteredActivities.Add(activity);
+                        lbxActivities.ItemsSource = null;
+                        lbxActivities.ItemsSource = filteredActivities;
+                    }
+                }
+            }
+            else if (rbWater.IsChecked == true)
+            {
+                foreach (Activity activity in allActivities)
+                {
+                    if (activity.TypeOfActivity == ActivityType.Water)
+                    {
+                        filteredActivities.Add(activity);
+                        lbxActivities.ItemsSource = null;
+                        lbxActivities.ItemsSource = filteredActivities;
+                    }
+                }
+            }
+            else if (rbAir.IsChecked == true)
+            {
+                foreach (Activity activity in allActivities)
+                {
+                    if (activity.TypeOfActivity == ActivityType.Air)
+                    {
+                        filteredActivities.Add(activity);
+                        lbxActivities.ItemsSource = null;
+                        lbxActivities.ItemsSource = filteredActivities;
+                    }
+                }
             }
         }
     }
