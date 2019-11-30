@@ -45,6 +45,9 @@ namespace ActivityPlanner_Assignment
 
         }
 
-
+        public override string ToString()
+        {
+            return $"{Name} - {ActivityDate.ToShortDateString()}";
+        }
     }
 }
