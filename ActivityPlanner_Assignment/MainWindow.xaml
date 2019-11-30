@@ -11,9 +11,9 @@
         <Label x:Name="lblAll" Content="All Activities" HorizontalAlignment="Left" Margin="135,86,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="206" Margin="135,117,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="LbxActivities_SelectionChanged"/>
         <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
-        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
+        <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
         <Label x:Name="lblDescription" Content="Description" HorizontalAlignment="Left" Margin="135,328,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxDescription" HorizontalAlignment="Left" Height="50" Margin="135,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" BorderThickness="0"/>
         <ListBox x:Name="lbxSelectedActivities" HorizontalAlignment="Left" Height="206" Margin="552,117,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="LbxSelectedActivities_SelectionChanged"/>
