@@ -252,5 +252,14 @@ namespace ActivityPlanner_Assignment
                 tbxDescription.Text = selectedActivity.Description;
             }
         }
+
+        private void LbxSelectedActivities_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Activity selectedActivity = lbxSelectedActivities.SelectedItem as Activity;
+            if (selectedActivity != null)
+            {
+                tbxDescription.Text = selectedActivity.Description;
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@
         <RadioButton x:Name="rbAir" Content="Air" HorizontalAlignment="Left" Margin="10,237,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblDescription" Content="Description" HorizontalAlignment="Left" Margin="135,328,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxDescription" HorizontalAlignment="Left" Height="50" Margin="135,359,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="358" BorderThickness="0"/>
-        <ListBox x:Name="lbxSelectedActivities" HorizontalAlignment="Left" Height="206" Margin="552,117,0,0" VerticalAlignment="Top" Width="217"/>
+        <ListBox x:Name="lbxSelectedActivities" HorizontalAlignment="Left" Height="206" Margin="552,117,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="LbxSelectedActivities_SelectionChanged"/>
         <Button x:Name="btnAdd" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="418,182,0,0" VerticalAlignment="Top" Width="75" Click="BtnAdd_Click"/>
         <Button x:Name="btnRemove" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="418,234,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click"/>
         <Label x:Name="lblSelected" Content="Selected Activities" HorizontalAlignment="Left" Margin="552,86,0,0" VerticalAlignment="Top"/>
