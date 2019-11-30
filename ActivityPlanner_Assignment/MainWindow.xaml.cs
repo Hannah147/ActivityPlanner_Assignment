@@ -109,6 +109,22 @@ namespace ActivityPlanner_Assignment
                 TypeOfActivity = ActivityType.Air,
                 Cost = 200m
             };
+
+            allActivities.Add(l1);
+            allActivities.Add(l2);
+            allActivities.Add(l3);
+
+            allActivities.Add(w1);
+            allActivities.Add(w2);
+            allActivities.Add(w3);
+
+            allActivities.Add(a1);
+            allActivities.Add(a2);
+            allActivities.Add(a3);
+
+            allActivities.Sort();
+
+            lbxActivities.ItemsSource = allActivities;
         }
     }
 }
