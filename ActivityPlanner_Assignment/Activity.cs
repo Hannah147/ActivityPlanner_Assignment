@@ -8,7 +8,7 @@ namespace ActivityPlanner_Assignment
 {
     // Declare an enum in the namespace so it can be used throughout the class and methods
     public enum ActivityType { Air, Water, Land}
-    class Activity
+    public class Activity : IComparable
     {
         // Declare Properties
         public string Name { get; set; }
@@ -48,6 +48,14 @@ namespace ActivityPlanner_Assignment
         public override string ToString()
         {
             return $"{Name} - {ActivityDate.ToShortDateString()}";
+        }
+
+        // CompareTo method for activity dates
+        public int CompareTo(object obj)
+        {
+            Activity objectCompare = obj as Activity;
+            int returnValue = this.ActivityDate.CompareTo(objectCompare.ActivityDate);
+            return returnValue;
         }
     }
 }
