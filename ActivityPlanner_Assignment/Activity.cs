@@ -32,7 +32,14 @@ namespace ActivityPlanner_Assignment
         public ActivityType TypeOfActivity { get; set; }
 
         // Constructors
-        public Activity(string name, DateTime activityDate, decimal)
+        public Activity(string name, DateTime activityDate, decimal cost, string description, ActivityType typeOfActivity)
+        {
+            Name = name;
+            ActivityDate = activityDate;
+            Cost = cost;
+            Description = description;
+            TypeOfActivity = typeOfActivity;
+        }
         public Activity():this("Unknown", DateTime.Now, 0, "Unknown", ActivityType.Air)
         {
 
