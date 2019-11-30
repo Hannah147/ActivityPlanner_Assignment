@@ -9,7 +9,7 @@
     <Grid>
         <Label x:Name="lblActivity" Content="Activity Planner" Foreground="CornflowerBlue" HorizontalAlignment="Left" Margin="135,20,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="28"/>
         <Label x:Name="lblAll" Content="All Activities" HorizontalAlignment="Left" Margin="135,86,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="206" Margin="135,117,0,0" VerticalAlignment="Top" Width="217"/>
+        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="206" Margin="135,117,0,0" VerticalAlignment="Top" Width="217" SelectionChanged="LbxActivities_SelectionChanged"/>
         <RadioButton x:Name="rbAll" Content="All" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
         <RadioButton x:Name="rbLand" Content="Land" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="rbWater" Content="Water" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top"/>
