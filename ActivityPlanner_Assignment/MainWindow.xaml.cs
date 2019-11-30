@@ -146,15 +146,45 @@ namespace ActivityPlanner_Assignment
             // null check
             if(selectedActivity != null)
             {
+                // Remove and add the activity to the new list box
                 allActivities.Remove(selectedActivity);
                 selectedActivities.Add(selectedActivity);
 
+                // refresh the screen method
                 RefreshScreen();
 
+                // Add to the total cost
                 totalCost = totalCost + selectedActivity.Cost;
 
                 tblkTotal.Text = totalCost.ToString("C");
 
+                // Sort the dates
+                allActivities.Sort();
+                selectedActivities.Sort();
+            }
+        }
+
+        private void BtnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            // figure out what item is selected
+            Activity selectedActivity = lbxSelectedActivities.SelectedItem as Activity;
+
+            // null check
+            if (selectedActivity != null)
+            {
+                // Remove and add the activity to the new list box
+                allActivities.Add(selectedActivity);
+                selectedActivities.Remove(selectedActivity);
+
+                // refresh the screen method
+                RefreshScreen();
+
+                // Add to the total cost
+                totalCost = totalCost - selectedActivity.Cost;
+
+                tblkTotal.Text = totalCost.ToString("C");
+
+                // Sort the dates
                 allActivities.Sort();
                 selectedActivities.Sort();
             }
