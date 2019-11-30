@@ -21,6 +21,8 @@ namespace ActivityPlanner_Assignment
     public partial class MainWindow : Window
     {
         List<Activity> allActivities = new List<Activity>();
+        List<Activity> selectedActivities = new List<Activity>();
+        public static decimal totalCost;
         public MainWindow()
         {
             InitializeComponent();
@@ -125,6 +127,37 @@ namespace ActivityPlanner_Assignment
             allActivities.Sort();
 
             lbxActivities.ItemsSource = allActivities;
+        }
+
+        private void RefreshScreen()
+        {
+            lbxActivities.ItemsSource = null;
+            lbxActivities.ItemsSource = allActivities;
+
+            lbxSelectedActivities.ItemsSource = null;
+            lbxSelectedActivities.ItemsSource = selectedActivities;
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            // figure out what item is selected
+            Activity selectedActivity = lbxActivities.SelectedItem as Activity;
+
+            // null check
+            if(selectedActivity != null)
+            {
+                allActivities.Remove(selectedActivity);
+                selectedActivities.Add(selectedActivity);
+
+                RefreshScreen();
+
+                totalCost = totalCost + selectedActivity.Cost;
+
+                tblkTotal.Text = totalCost.ToString("C");
+
+                allActivities.Sort();
+                selectedActivities.Sort();
+            }
         }
     }
 }
