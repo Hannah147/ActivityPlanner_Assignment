@@ -153,6 +153,7 @@ namespace ActivityPlanner_Assignment
             // figure out what item is selected
             Activity selectedActivity = lbxActivities.SelectedItem as Activity;
 
+            // Couldn't figure out how to display a message if there was a conflict in dates
             /*if (selectedActivity.ActivityDate != selectedActivity.ActivityDate)
             {*/
                 // null check
